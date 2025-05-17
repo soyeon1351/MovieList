@@ -1,10 +1,15 @@
+import { Routes, Route } from "react-router-dom"
+import MovieList from "./Components/MovieLIst.jsx"
+import MovieDetail from "./Components/MovieDetail.jsx"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-
+    <Routes>
+      <Route path="/" element={<MovieList />}/>
+      <Route path="/details" element={<MovieDetail />}/>
+    </Routes>
     </>
   )
 }
