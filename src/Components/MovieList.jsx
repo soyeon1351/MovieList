@@ -17,7 +17,10 @@ export default function MovieList () {
         
         fetch(`${TMDB_BASE_URL}/movie/popular?language=ko-KR&page=1`, options)
         .then(res => res.json())
-        .then(res => setMovies(res.results))
+        .then(res => {
+            const filteredMoives = res.results.filter((movie)=> movie.adult === false)
+            setMovies(filteredMoives)
+        })
         .catch(err => console.error(err));
     },[])
 
