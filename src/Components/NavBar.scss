@@ -1,0 +1,100 @@
+// 🍑 Pink Pomelo Theme
+$color-main: #FFE2DC;       // 연핑크
+$color-accent: #FFB3AB;     // 포멜로 속살 핑크
+$color-text: #5C2F2F;       // 짙은 브라운 레드
+$color-background: #FFF7F5; // 밝은 핑크 배경
+
+.navbar {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    background-color: $color-main;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 40px;
+
+    .logo-link {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        text-decoration: none;
+    }
+    
+    .pomelo {
+        width: 50px;
+    }
+    
+    
+    .logo-text {
+        font-size: 1.6rem;
+        font-weight: bold;
+        color: $color-text;
+    }
+
+    .input-text {
+        width: 50%;
+        height: 50px;
+        padding: 8px 12px;
+        border: 2px solid $color-accent;
+        border-radius: 8px;
+        font-size: 1rem;
+        color: $color-text;
+        background-color: white;
+
+        &:focus {
+            outline: none;
+            border-color: darken($color-accent, 10%);
+            box-shadow: 0 0 5px rgba(255, 179, 171, 0.6);
+        }
+
+        &::placeholder {
+            color: lighten($color-text, 20%);
+            font-style: italic;
+        }
+    }
+
+    .login-btn {
+        padding: 8px 16px;
+        margin-left: 8px;
+        border: none;
+        border-radius: 20px;
+        background-color: $color-accent; // 포멜로 속살 핑크
+        color: white;
+        font-weight: bold;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: darken($color-accent, 8%);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+
+    .signup-btn {
+        padding: 8px 16px;
+        margin-left: 8px;
+        border: 2px solid $color-accent;
+        border-radius: 20px;
+        background-color: white;
+        color: $color-accent;
+        font-weight: bold;
+        font-size: 0.95rem;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+            background-color: $color-accent;
+            color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        &:active {
+            transform: scale(0.97);
+        }
+    }
+}

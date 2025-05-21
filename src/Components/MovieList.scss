@@ -1,46 +1,52 @@
+// 🍑 Pink Pomelo Theme
+$color-main: #FFE2DC;       // 연핑크
+$color-accent: #FFB3AB;     // 포멜로 속살 핑크
+$color-text: #5C2F2F;       // 짙은 브라운 레드
+$color-background: #FFF7F5; // 밝은 핑크 배경
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+    .movieCard {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 50px;
+        background-color: $color-background;
+    
+        .card {
+            flex: 1 1 calc(25% - 20px); // 4등분 - 여유간격 포함
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        
+        .img {
+            width: 100%;
+            max-width: 350px; // ✅ 이미지 최대 너비 제한
+            height: auto;
+            aspect-ratio: 2 / 3; // 세로 비율 유지
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .title {
+            margin-top: 10px;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        
+        .vote {
+            font-size: 0.9rem;
+            text-align: center;
+            color: #777;
+        }
+    }
 }
 
-body {
-    padding: 50px;
-}
 
-.movieCard {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
-}
-
-.card {
-    flex: 1 1 calc(25% - 20px); // 4등분 - 여유간격 포함
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-
-.img {
-    width: 100%;
-    max-width: 350px; // ✅ 이미지 최대 너비 제한
-    height: auto;
-    aspect-ratio: 2 / 3; // 세로 비율 유지
-    object-fit: cover;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.title {
-    margin-top: 10px;
-    font-size: 1.2rem;
-    text-align: center;
-}
-
-.vote {
-    font-size: 0.9rem;
-    text-align: center;
-    color: #777;
-}
