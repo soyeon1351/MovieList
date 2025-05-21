@@ -3,6 +3,7 @@ import MovieList from "./Components/MovieLIst.jsx"
 import MovieDetail from "./Components/MovieDetail.jsx"
 import Layout from "./Components/Layout.jsx"
 import MovieSearch from "./Components/MovieSearch.jsx"
+import LoginPage from "./Components/LoginPage.jsx"
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<MovieList />}/>
         <Route path="/details/:id" element={<MovieDetail />}/>
         <Route path="/search" element={<MovieSearch />}/>
+        <Route path="/login" element={<LoginPage />}/>
       </Route>
     </Routes>
     </div>

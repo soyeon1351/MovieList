@@ -1,0 +1,86 @@
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff0ec;
+}
+
+.login-container {
+    width: 90%;
+    max-width: 500px;
+    min-width: 320px;
+    height: 500px;
+    margin: 50px auto;
+    background: #fff7f5;
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-text{
+    margin-bottom: 45px;
+}
+
+.login-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 12px;
+    border: 1px solid #ffd1c4;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.email-login-btn {
+    background-color: #ffb3ab;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    color: #fff;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background 0.3s;
+
+    &:hover {
+    background-color: darken(#ffb3ab, 10%);
+    }
+}
+
+.divider {
+    margin: 1.5rem 0;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.social-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.kakao-btn {
+    background-color: #fae100;
+    color: #3c1e1e;
+    font-weight: bold;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.google-btn {
+    background-color: #A6D6A1;
+    color: #444;
+    font-weight: bold;
+    border: 1px solid #ccc;
+    padding: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}

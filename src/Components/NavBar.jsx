@@ -38,7 +38,7 @@ export default function NavBar () {
                 }}
                 />
             <div>
-                <button className="login-btn">로그인</button>
+                <button className="login-btn" onClick={()=>navigate('/login')}>로그인</button>
                 <button className="signup-btn">회원가입</button>
             </div>
         </div>
