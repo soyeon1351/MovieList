@@ -3,12 +3,14 @@ import { TOKEN } from "../Config";
 import { TMDB_BASE_URL } from "../Config";
 import { TMDB_IMAGE_URL } from "../Config";
 import { useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import '../Components/MovieSearch.scss'
 
 export default function MovieSearch () {
     const [searchParams] = useSearchParams()
     const debounceParams = searchParams.get('query')
     const [movies, setMovies] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
     const options = {
@@ -36,7 +38,7 @@ export default function MovieSearch () {
     return (
         <div className="movieCard">
             {movies.map((movie) => (
-                <div key={movie.id} className="card">
+                <div key={movie.id} className="card" onClick={() => navigate(`/details/${movie.id}`)}>
                     <img 
                     className='img'
                     src={`${TMDB_IMAGE_URL}${movie.poster_path}`}
