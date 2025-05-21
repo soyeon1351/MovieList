@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom"
+import { Link, useNavigate, useLocation } from "react-router-dom"
 import '../Components/Navbar.scss'
 import { useEffect, useState } from "react"
 import useDebounce from "../Hooks/useDebounce"
@@ -7,12 +7,19 @@ export default function NavBar () {
     const [searchInput, setSearchInput] = useState("")
     const debouncedSearch = useDebounce(searchInput, 500)
     const navigate = useNavigate()
+    const location = useLocation()
 
     useEffect(() => {
         if(debouncedSearch) {
             navigate(`/search?query=${debouncedSearch}`)
         }
     },[debouncedSearch])
+
+    useEffect(() => {
+        if (location.pathname === "/") {
+            setSearchInput("");
+        }
+    }, [location.pathname]);
 
     return (
         <div className="navbar">
@@ -28,7 +35,6 @@ export default function NavBar () {
                 onChange={(e)=>{
                     const searchValue = e.target.value
                     setSearchInput(searchValue)
-                    console.log(searchValue)
                 }}
                 />
             <div>
