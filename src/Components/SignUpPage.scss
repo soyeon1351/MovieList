@@ -1,0 +1,70 @@
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff0ec;
+}
+
+.signup-container {
+  max-width: 480px;
+  width: 90%;
+  background: #fff7f5;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.signup-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+  color: #333;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #ffd1c4;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+// 🚨 에러 발생한 input에 적용될 스타일
+.input-error {
+  border-color: #ff5c5c;
+  background-color: #fff0f0;
+}
+
+// ⚠️ 에러 메시지 스타일
+.error-message {
+  margin-top: -0.75rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: #ff5c5c;
+  text-align: left;
+  padding-left: 4px;
+}
+
+.signup-click {
+  width: 100%;
+  padding: 14px;
+  font-size: 1rem;
+  background-color: #ffa4a4;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+
+  &:hover {
+    background-color: #ff8c8c;
+  }
+}
+
+.input-group {
+  margin: 20px 0;
+}
