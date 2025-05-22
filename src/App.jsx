@@ -4,6 +4,7 @@ import MovieDetail from "./Components/MovieDetail.jsx"
 import Layout from "./Components/Layout.jsx"
 import MovieSearch from "./Components/MovieSearch.jsx"
 import LoginPage from "./Components/LoginPage.jsx"
+import SignUpPage from "./Components/SignUpPage.jsx"
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
         <Route path="/details/:id" element={<MovieDetail />}/>
         <Route path="/search" element={<MovieSearch />}/>
         <Route path="/login" element={<LoginPage />}/>
+        <Route path="/signup" element={<SignUpPage />}/>
       </Route>
     </Routes>
     </div>
