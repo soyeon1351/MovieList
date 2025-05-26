@@ -32,8 +32,12 @@ npm install
 npm run dev
 ```
 
+---
+
 ## 🔑 .env 설정
 
+---
+
 ## 📸 화면 예시
-<img width="1255" alt="스크린샷 2025-05-27 오전 2 45 30" src="https://github.com/user-attachments/assets/c76ec2ff-af5d-4685-baca-889c3a80cdf4" />
-<img width="1255" alt="스크린샷 2025-05-27 오전 2 45 38" src="https://github.com/user-attachments/assets/b882b4e4-e155-4026-931b-c4ad6eaef274" />
+<img width="1000" alt="스크린샷 2025-05-27 오전 2 45 30" src="https://github.com/user-attachments/assets/c76ec2ff-af5d-4685-baca-889c3a80cdf4" />
+<img width="1000" alt="스크린샷 2025-05-27 오전 2 45 38" src="https://github.com/user-attachments/assets/b882b4e4-e155-4026-931b-c4ad6eaef274" />
