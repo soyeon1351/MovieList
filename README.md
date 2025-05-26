@@ -30,8 +30,7 @@ git clone https://github.com/yourusername/pomelo-movie.git
 cd pomelo-movie
 npm install
 npm run dev
-
----
+```
 
 ## 🔑 .env 설정
 
