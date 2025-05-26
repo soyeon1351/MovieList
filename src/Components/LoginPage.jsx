@@ -7,7 +7,7 @@ import { useContext } from "react";
 
 export default function LoginPage() {
   const navigate = useNavigate()
-  const { login, getUserInfo } = useSupabaseAuth(); // 여기서 login 함수 사용
+  const { login, getUserInfo, loginWithKakao } = useSupabaseAuth(); // 여기서 login 함수 사용
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState({ email: "", password: "" });
   const { setUser } = useContext(UserContext); 
@@ -48,6 +48,17 @@ export default function LoginPage() {
     }
   };
 
+  const handleKakaoLogin = async () => {
+    try {
+      const redirectUrl = `http://localhost:5173/`; // 로그인 성공 후 돌아올 URL 지정 (현재 사이트 기준)
+      await loginWithKakao(redirectUrl);
+    } catch (error) {
+      console.error("카카오 로그인 실패:", error.message);
+    }
+  };
+
+
+
   return (
     <div className="flex">
       <div className="login-container">
@@ -62,7 +73,7 @@ export default function LoginPage() {
               onChange={handleChange}
               required
             />
-            {errors.password && (<p className="error-message">{errors.password}</p>)}
+            {errors.password && (<p className="error-message">{errors.email}</p>)}
 
           </div>
           <div className="input-group">
@@ -84,7 +95,7 @@ export default function LoginPage() {
         <div className="divider">또는</div>
 
         <div className="social-buttons">
-          <button className="kakao-btn">카카오로 로그인</button>
+          <button className="kakao-btn" onClick={handleKakaoLogin}>카카오로 로그인</button>
           <button className="google-btn">구글로 로그인</button>
         </div>
       </div>
