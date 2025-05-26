@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { useSupabaseAuth } from '../supabase'; // signUp 함수가 들어있는 커스텀 훅
 import '../Components/SignUpPage.scss';
+import { useNavigate } from 'react-router-dom';
 
 export default function SignUpPage() {
   const { signUp } = useSupabaseAuth();
+  const navigate = useNavigate()
 
   const [form, setForm] = useState({
     userName: '',
@@ -61,7 +63,7 @@ export default function SignUpPage() {
           alert(`회원가입 실패: ${error.message}`);
         } else {
           alert('회원가입 완료!');
-          // 필요하면 로그인 페이지 이동 코드 추가
+          navigate("/");// 필요하면 로그인 페이지 이동 코드 추가
         }
       } catch (err) {
         alert('회원가입 중 오류가 발생했습니다.');
