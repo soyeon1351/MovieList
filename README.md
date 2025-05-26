@@ -31,6 +31,8 @@ cd pomelo-movie
 npm install
 npm run dev
 
+---
+
 ## 🔑 .env 설정
 
 ## 📸 화면 예시
