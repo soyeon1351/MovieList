@@ -98,3 +98,37 @@ $color-background: #FFF7F5; // 밝은 핑크 배경
         }
     }
 }
+
+.user-name {
+  margin-right: 12px;
+  font-weight: bold;
+  color: $color-text;
+  font-size: 1rem;
+  background-color: rgba(255, 179, 171, 0.2); // 부드러운 배경
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+.logout-btn {
+  padding: 8px 16px;
+  margin-left: 8px;
+  border: none;
+  border-radius: 20px;
+  background-color: white;
+  color: $color-accent;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid $color-accent;
+
+  &:hover {
+    background-color: $color-accent;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
